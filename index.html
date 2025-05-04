@@ -1,0 +1,1117 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="owl.css" rel="stylesheet" type="text/css">
+    <link href="Primer.css" rel="stylesheet" type="text/css">
+    <link href="rec.css" rel="stylesheet" type="text/css">
+    <link href="extra.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/lode/favicon.ico">
+    <script src="jquery.js"></script>
+    <script src="jquery.scrollTo.js"></script>
+    <script src="marked.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                jQuery(".markdown").each(function (el) {
+                    jQuery(this).after(marked(jQuery(this).text())).remove()
+                });
+                var list =
+                    $('a[name="https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Ontology%20_FYP%20process.rdf "]');
+                if (list.size() != 0) {
+                    var element = list.first();
+                    $.scrollTo(element);
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <dl>
+            <dt>IRI:</dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology</dd>
+        </dl>
+        <dl>
+            <dt>Other visualisation
+                :
+            </dt>
+            <dd><a
+                    href="/lode/source?url=https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Ontology%20_FYP%20process.rdf">Ontology
+                    source</a>
+                -
+                <a
+                    href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Ontology%20_FYP%20process.rdf">WebVowl</a>
+            </dd>
+        </dl>
+    </div>
+    <hr>
+    <div id="toc">
+        <h2>Table of Content</h2>
+        <ol>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#objectproperties">Object Properties</a></li>
+            <li><a href="#dataproperties">Data Properties</a></li>
+            <li><a href="#namedindividuals">Named Individuals</a></li>
+            <li><a href="#generalaxioms">General Axioms</a></li>
+            <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+        </ol>
+    </div>
+    <div id="classes">
+        <h2>Classes</h2>
+        <ul class="hlist">
+            <li><a href="#d4e243"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable"><span>deliverable</span></a>
+            </li>
+            <li><a href="#d4e279"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage"><span>evaluation
+                        stage</span></a></li>
+            <li><a href="#d4e286"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator"><span>evaluator</span></a>
+            </li>
+            <li><a href="#d4e298"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Final_Report"><span>final
+                        report</span></a></li>
+            <li><a href="#d4e228"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Hardware_Project"><span>hardware
+                        project</span></a></li>
+            <li><a href="#d4e307"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone"><span>milestone</span></a>
+            </li>
+            <li><a href="#d4e328"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation"><span>presentation</span></a>
+            </li>
+            <li><a href="#d4e235"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Progress_Report"><span>progress
+                        report</span></a></li>
+            <li><a href="#d4e337"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project"><span>project</span></a>
+            </li>
+            <li><a href="#d4e394"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document"><span>proposal
+                        document</span></a></li>
+            <li><a href="#d4e402"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage"><span>proposal
+                        stage</span></a></li>
+            <li><a href="#d4e409"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Research_Project"><span>research
+                        project</span></a></li>
+            <li><a href="#d4e418"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project"><span>software
+                        project</span></a></li>
+            <li><a href="#d4e426"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage"><span>stage</span></a>
+            </li>
+            <li><a href="#d4e459"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder"><span>stakeholder</span></a>
+            </li>
+            <li><a href="#d4e468"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student"><span>student</span></a>
+            </li>
+            <li><a href="#d4e476"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission"><span>submission</span></a>
+            </li>
+            <li><a href="#d4e483"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage"><span>submission
+                        stage</span></a></li>
+            <li><a href="#d4e490"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor"><span>supervisor</span></a>
+            </li>
+        </ul>
+        <div id="d4e243" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable"></a>
+            <h3>deliverable<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable</p>
+            <div class="comment"><span class="markdown">Every deliverable belongs to exactly one project</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#FYP_Entity">f y
+                        p entity</span><sup title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e9"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject">belongs
+                        to project</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">exactly</span> 1 <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e175"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span class="logic">some</span>
+                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e298"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Final_Report">final
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e235"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Progress_Report">progress
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e394"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e35"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable">has
+                        deliverable</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e279" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage"></a>
+            <h3>evaluation stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e402"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e483"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e286" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator"></a>
+            <h3>evaluator<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e468"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e490"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e298" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Final_Report"></a>
+            <h3>final report<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Final_Report</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e394"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e228" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Hardware_Project"></a>
+            <h3>hardware project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Hardware_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e307" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone"></a>
+            <h3>milestone<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone
+            </p>
+            <div class="comment"><span class="markdown">Every milestone belongs to at least one project.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#FYP_Entity">f y
+                        p entity</span><sup title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e9"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject">belongs
+                        to project</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e328"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e476"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission">submission</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e60"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone">has
+                        milestone</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e328" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation"></a>
+            <h3>presentation<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e500"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation">midterm
+                        presentation</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e476"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission">submission</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e235" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Progress_Report"></a>
+            <h3>progress report<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Progress_Report</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e337" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project"></a>
+            <h3>project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project
+            </p>
+            <div class="comment"><span class="markdown">Every project must have at least one deliverable.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#FYP_Entity">f y
+                        p entity</span><sup title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e35"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable">has
+                        deliverable</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e82"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage">has
+                        stage</a><sup title="object property" class="type-op">op</sup> <span class="logic">some</span>
+                    <a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e122"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn">works
+                        on</a><sup title="object property" class="type-op">op</sup> <span class="logic">only</span> <a
+                        href="#d4e468"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e175"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span class="logic">some</span>
+                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e228"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Hardware_Project">hardware
+                        project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e409"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Research_Project">research
+                        project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e418"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e161"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain">has
+                        domain</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e197"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective">has
+                        objective</a><sup title="data property" class="type-dp">dp</sup>, <a href="#d4e82"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage">has
+                        stage</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e212"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle">has
+                        title</a><sup title="data property" class="type-dp">dp</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e9"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject">belongs
+                        to project</a><sup title="object property" class="type-op">op</sup>, <a href="#d4e122"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn">works
+                        on</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e394" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document"></a>
+            <h3>proposal document<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e523"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1">proposal
+                        doc1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e298"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Final_Report">final
+                        report</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e402" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage"></a>
+            <h3>proposal stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e541"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1">proposal
+                        stage 1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e279"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e483"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e409" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Research_Project"></a>
+            <h3>research project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Research_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e418"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e418" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project"></a>
+            <h3>software project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e510"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project">my
+                        project</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e409"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Research_Project">research
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e426" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage"></a>
+            <h3>stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or
+                    <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage</p>
+            <div class="comment"><span class="markdown">Every stage involves at least one stakeholder.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#FYP_Entity">f y
+                        p entity</span><sup title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e60"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone">has
+                        milestone</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e97"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder">involves
+                        stakeholder</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e279"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e402"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e483"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e82"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage">has
+                        stage</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e459" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder"></a>
+            <h3>stakeholder<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#FYP_Entity">f y
+                        p entity</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e286"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e468"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e490"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e97"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder">involves
+                        stakeholder</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e243"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e337"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e468" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student"></a>
+            <h3>student<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e122"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn">works
+                        on</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e551"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1">student1</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e286"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e490"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e476" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission"></a>
+            <h3>submission<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e307"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e328"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e483" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage"></a>
+            <h3>submission stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e426"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e279"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e402"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e490" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor"></a>
+            <h3>supervisor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e459"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e534"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1">supervisor1</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e286"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e468"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="objectproperties">
+        <h2>Object Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e9"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject"><span>belongs
+                        to project</span></a></li>
+            <li><a href="#d4e35"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable"><span>has
+                        deliverable</span></a></li>
+            <li><a href="#d4e60"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone"><span>has
+                        milestone</span></a></li>
+            <li><a href="#d4e82"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage"><span>has
+                        stage</span></a></li>
+            <li><a href="#d4e97"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder"><span>involves
+                        stakeholder</span></a></li>
+            <li><a href="#d4e122"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn"><span>works
+                        on</span></a></li>
+        </ul>
+        <div id="d4e9" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject"></a>
+            <h3>belongs to project<sup title="object property" class="type-op">op</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject</p>
+            <div class="comment"><span class="markdown">Links deliverables/milestones to a project</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e243"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e307"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e35" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable"></a>
+            <h3>has deliverable<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable</p>
+            <div class="comment"><span class="markdown">Links to deliverables</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e426"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e243"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e60" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone"></a>
+            <h3>has milestone<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e426"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e307"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e82" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage"></a>
+            <h3>has stage<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage
+            </p>
+            <div class="comment"><span class="markdown">Links a project to its stages</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e426"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e97" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder"></a>
+            <h3>involves stakeholder<sup title="object property" class="type-op">op</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder</p>
+            <div class="comment"><span class="markdown">Indicates stakeholders involved</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e426"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e459"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e122" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn"></a>
+            <h3>works on<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn
+            </p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e468"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="dataproperties">
+        <h2>Data Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e135"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription"><span>has
+                        description</span></a></li>
+            <li><a href="#d4e161"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain"><span>has
+                        domain</span></a></li>
+            <li><a href="#d4e175"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate"><span>has
+                        due date</span></a></li>
+            <li><a href="#d4e197"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective"><span>has
+                        objective</span></a></li>
+            <li><a href="#d4e212"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle"><span>has
+                        title</span></a></li>
+        </ul>
+        <div id="d4e135" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription"></a>
+            <h3>has description<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription</p>
+            <div class="comment"><span class="markdown">Description of stages/milestones</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e307"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e426"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e161" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain"></a>
+            <h3>has domain<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain
+            </p>
+            <div class="comment"><span class="markdown">The domain of the FYP</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e175" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate"></a>
+            <h3>has due date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate
+            </p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e243"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e307"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e197" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective"></a>
+            <h3>has objective<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective</p>
+            <div class="comment"><span class="markdown">The objective of the FYP</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e212" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle"></a>
+            <h3>has title<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle
+            </p>
+            <div class="comment"><span class="markdown">The title of the FYP"</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e337"
+                            title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="namedindividuals">
+        <h2>Named Individuals</h2>
+        <ul class="hlist">
+            <li><a href="#d4e500"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation"><span>midterm
+                        presentation</span></a></li>
+            <li><a href="#d4e510"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project"><span>my
+                        project</span></a></li>
+            <li><a href="#d4e523"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1"><span>proposal
+                        doc1</span></a></li>
+            <li><a href="#d4e541"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1"><span>proposal
+                        stage 1</span></a></li>
+            <li><a href="#d4e551"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1"><span>student1</span></a>
+            </li>
+            <li><a href="#d4e534"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1"><span>supervisor1</span></a>
+            </li>
+        </ul>
+        <div id="d4e500" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation"></a>
+            <h3>midterm presentation<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e328"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e175"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2025-007-15"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e510" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project"></a>
+            <h3>my project<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project
+            </p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e418"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e161"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain">has
+                        domain</a><sup title="data property" class="type-dp">dp</sup> <span class="literal">"Artificial
+                        Intelligence"</span></dd>
+                <dd><a href="#d4e212"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle">has
+                        title</a><sup title="data property" class="type-dp">dp</sup> <span class="literal">"AI Mood
+                        Based Music Recommendation system"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e523" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1"></a>
+            <h3>proposal doc1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e394"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e175"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2025-08-01"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e541" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1"></a>
+            <h3>proposal stage 1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e402"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e135"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription">has
+                        description</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"Develop project proposal"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e551" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1"></a>
+            <h3>student1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1
+            </p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e468"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e534" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1"></a>
+            <h3>supervisor1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e490"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="generalaxioms">
+        <h2>General Axioms</h2>
+        <div id="d4e559" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e243"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Deliverable">deliverable</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e307"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Milestone">milestone</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e337"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Project">project</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e426"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stage">stage</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e459"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Stakeholder">stakeholder</a><sup
+                    title="class" class="type-c">c</sup></p>
+        </div>
+        <div id="d4e577" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e279"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluation_Stage">evaluation
+                    stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e402"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Proposal_Stage">proposal
+                    stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e483"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Submission_Stage">submission
+                    stage</a><sup title="class" class="type-c">c</sup></p>
+        </div>
+        <div id="d4e591" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e286"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Evaluator">evaluator</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e468"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Student">student</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e490"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#Supervisor">supervisor</a><sup
+                    title="class" class="type-c">c</sup></p>
+        </div>
+    </div>
+    <div id="namespacedeclarations">
+        <h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+        <dl>
+            <dt><em>default namespace</em></dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology/</dd>
+            <dt>4</dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/</dd>
+            <dt>Fyp_Process_Ontology</dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#</dd>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>untitled-ontology-95</dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/untitled-ontology-95#</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+        </dl>
+    </div>
+    <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a
+            href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a
+            href="http://www.essepuntato.it">Silvio Peroni</a>
+        .
+    </p>
+</body>
+
+</html>
