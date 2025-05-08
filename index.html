@@ -1,0 +1,2693 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/lode/owl.css" rel="stylesheet" type="text/css">
+    <link href="/lode/Primer.css" rel="stylesheet" type="text/css">
+    <link href="/lode/rec.css" rel="stylesheet" type="text/css">
+    <link href="/lode/extra.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/lode/favicon.ico">
+    <script src="/lode/jquery.js"></script>
+    <script src="/lode/jquery.scrollTo.js"></script>
+    <script src="/lode/marked.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                jQuery(".markdown").each(function (el) {
+                    jQuery(this).after(marked(jQuery(this).text())).remove()
+                });
+                var list =
+                    $('a[name="https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Fyp%20process%20Ontology.rdf"]');
+    if (list.size() != 0) {
+                    var element = list.first();
+                    $.scrollTo(element);
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <dl>
+            <dt>IRI:</dt>
+            <dd>http://www.semanticweb.org/fyp_process_ontology</dd>
+        </dl>
+        <dl>
+            <dt>Imported Ontologies
+                :
+            </dt>
+            <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a> (<a
+                    href="/lode/extract?url=http://purl.org/dc/terms/">visualise it with
+                    LODE
+                </a>)</dd>
+            <dd><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a> (<a
+                    href="/lode/extract?url=http://xmlns.com/foaf/0.1/">visualise it with
+                    LODE
+                </a>)</dd>
+        </dl>
+        <dl>
+            <dt>Other visualisation
+                :
+            </dt>
+            <dd><a
+                    href="/lode/source?url=https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Fyp%20process%20Ontology.rdf">Ontology
+                    source</a>
+                -
+                <a
+                    href="https://service.tib.eu/webvowl/#iri=https://raw.githubusercontent.com/Noreen2323/FYP-Process-Ontology-/refs/heads/main/Fyp%20process%20Ontology.rdf">WebVowl</a>
+            </dd>
+        </dl>
+    </div>
+    <hr>
+    <div id="toc">
+        <h2>Table of Content</h2>
+        <ol>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#objectproperties">Object Properties</a></li>
+            <li><a href="#dataproperties">Data Properties</a></li>
+            <li><a href="#namedindividuals">Named Individuals</a></li>
+            <li><a href="#annotationproperties">Annotation Properties</a></li>
+            <li><a href="#generalaxioms">General Axioms</a></li>
+            <li><a href="#namespacedeclarations">Namespace Declarations</a></li>
+        </ol>
+    </div>
+    <div id="classes">
+        <h2>Classes</h2>
+        <ul class="hlist">
+            <li><a href="#d4e891" title="http://purl.org/dc/terms/AgentClass"><span>Agent Class</span></a></li>
+            <li><a href="#d4e1017"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable"><span>deliverable</span></a>
+            </li>
+            <li><a href="#d4e1048"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage"><span>evaluation
+                        stage</span></a></li>
+            <li><a href="#d4e1055"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator"><span>evaluator</span></a>
+            </li>
+            <li><a href="#d4e903" title="http://purl.org/dc/terms/FileFormat"><span>File Format</span></a></li>
+            <li><a href="#d4e1063"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report"><span>final
+                        report</span></a></li>
+            <li><a href="#d4e1070"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project"><span>hardware
+                        project</span></a></li>
+            <li><a href="#d4e915" title="http://purl.org/dc/terms/Jurisdiction"><span>Jurisdiction</span></a></li>
+            <li><a href="#d4e922" title="http://purl.org/dc/terms/LicenseDocument"><span>License Document</span></a>
+            </li>
+            <li><a href="#d4e934" title="http://purl.org/dc/terms/Location"><span>Location</span></a></li>
+            <li><a href="#d4e945" title="http://purl.org/dc/terms/MediaType"><span>Media Type</span></a></li>
+            <li><a href="#d4e1077"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone"><span>milestone</span></a>
+            </li>
+            <li><a href="#d4e966" title="http://purl.org/dc/terms/PeriodOfTime"><span>Period of Time</span></a></li>
+            <li><a href="#d4e973" title="http://purl.org/dc/terms/PhysicalMedium"><span>Physical Medium</span></a></li>
+            <li><a href="#d4e1093"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation"><span>presentation</span></a>
+            </li>
+            <li><a href="#d4e1102"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report"><span>progress
+                        report</span></a></li>
+            <li><a href="#d4e1112"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document"><span>proposal
+                        document</span></a></li>
+            <li><a href="#d4e1120"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage"><span>proposal
+                        stage</span></a></li>
+            <li><a href="#d4e1127"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project"><span>research
+                        project</span></a></li>
+            <li><a href="#d4e998" title="http://purl.org/dc/terms/SizeOrDuration"><span>Size or Duration</span></a></li>
+            <li><a href="#d4e1134"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project"><span>software
+                        project</span></a></li>
+            <li><a href="#d4e1142"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage"><span>stage</span></a>
+            </li>
+            <li><a href="#d4e1009"
+                    title="http://www.semanticweb.org/fyp_process_ontology#Stakeholder"><span>stakeholder</span></a>
+            </li>
+            <li><a href="#d4e1170"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student"><span>student</span></a>
+            </li>
+            <li><a href="#d4e1177"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission"><span>submission</span></a>
+            </li>
+            <li><a href="#d4e1185"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage"><span>submission
+                        stage</span></a></li>
+            <li><a href="#d4e1192"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor"><span>supervisor</span></a>
+            </li>
+        </ul>
+        <div id="d4e891" class="entity"><a name="http://purl.org/dc/terms/AgentClass"></a>
+            <h3>Agent Class<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/AgentClass</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Class">class</span></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1260" title="http://purl.org/dc/terms/Agent">Agent</a><sup title="named individual"
+                        class="type-ni">ni</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e1017" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable"></a>
+            <h3>deliverable<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e586"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject">belongs
+                        to project</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">only</span> <span class="dotted"
+                        title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                <dd><a href="#d4e833"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span class="logic">some</span>
+                    <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e1063"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report">final
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1102"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report">progress
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1112"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e608"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable">has
+                        deliverable</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1077"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1142"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup>, <span class="dotted"
+                        title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+            </dl>
+        </div>
+        <div id="d4e1048" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage"></a>
+            <h3>evaluation stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1142"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1120"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1185"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1055" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator"></a>
+            <h3>evaluator<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1009"
+                        title="http://www.semanticweb.org/fyp_process_ontology#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1170"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1192"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e903" class="entity"><a name="http://purl.org/dc/terms/FileFormat"></a>
+            <h3>File Format<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/FileFormat</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e945" title="http://purl.org/dc/terms/MediaType">Media Type</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e1063" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report"></a>
+            <h3>final report<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1017"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1102"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report">progress
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1112"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1070" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project"></a>
+            <h3>hardware project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1127"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project">research
+                        project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1134"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e915" class="entity"><a name="http://purl.org/dc/terms/Jurisdiction"></a>
+            <h3>Jurisdiction<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/Jurisdiction</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period,
+                        or Jurisdiction</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e922" class="entity"><a name="http://purl.org/dc/terms/LicenseDocument"></a>
+            <h3>License Document<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/LicenseDocument</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/RightsStatement">Rights Statement</span><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e934" class="entity"><a name="http://purl.org/dc/terms/Location"></a>
+            <h3>Location<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/Location</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period,
+                        or Jurisdiction</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e945" class="entity"><a name="http://purl.org/dc/terms/MediaType"></a>
+            <h3>Media Type<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/MediaType</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/MediaTypeOrExtent">Media Type or
+                        Extent</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e903" title="http://purl.org/dc/terms/FileFormat">File Format</a><sup title="class"
+                        class="type-c">c</sup>, <a href="#d4e973"
+                        title="http://purl.org/dc/terms/PhysicalMedium">Physical Medium</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e1077" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone"></a>
+            <h3>milestone<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e586"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject">belongs
+                        to project</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <span class="dotted"
+                        title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e1093"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1177"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission">submission</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e633"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone">has
+                        milestone</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1017"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e966" class="entity"><a name="http://purl.org/dc/terms/PeriodOfTime"></a>
+            <h3>Period of Time<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/PeriodOfTime</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">Location, Period,
+                        or Jurisdiction</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e973" class="entity"><a name="http://purl.org/dc/terms/PhysicalMedium"></a>
+            <h3>Physical Medium<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/PhysicalMedium</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e945" title="http://purl.org/dc/terms/MediaType">Media Type</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e1093" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation"></a>
+            <h3>presentation<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1077"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1892"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation">midterm
+                        presentation</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1177"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission">submission</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1102" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report"></a>
+            <h3>progress report<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report</p>
+            <div class="comment"><span class="markdown">Links deliverables/milestones to a project</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1017"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1063"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report">final
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1112"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1112" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document"></a>
+            <h3>proposal document<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1017"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1918"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1">proposal
+                        doc1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1063"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report">final
+                        report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1102"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report">progress
+                        report</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1120" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage"></a>
+            <h3>proposal stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1142"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1939"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1">proposal
+                        stage 1</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1048"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1185"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1127" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project"></a>
+            <h3>research project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1070"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project">hardware
+                        project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1134"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e998" class="entity"><a name="http://purl.org/dc/terms/SizeOrDuration"></a>
+            <h3>Size or Duration<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/SizeOrDuration</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/MediaTypeOrExtent">Media Type or
+                        Extent</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>named individual</dd>
+            </dl>
+        </div>
+        <div id="d4e1134" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project"></a>
+            <h3>software project<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1902"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project">my
+                        project</a><sup title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1070"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project">hardware
+                        project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1127"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project">research
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1142" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage"></a>
+            <h3>stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a> or
+                    <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage</p>
+            <div class="comment"><span class="markdown">Every stage involves at least one stakeholder.”, “Every stage
+                    must have at least one milestone.</span></div>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e633"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone">has
+                        milestone</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e1077"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dd><a href="#d4e670"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder">involves
+                        stakeholder</a><sup title="object property" class="type-op">op</sup> <span
+                        class="logic">some</span> <a href="#d4e1009"
+                        title="http://www.semanticweb.org/fyp_process_ontology#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e1048"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1120"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1185"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage">submission
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>is in range of</dt>
+                <dd><a href="#d4e656"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage">has
+                        stage</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1017"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1009" class="entity"><a name="http://www.semanticweb.org/fyp_process_ontology#Stakeholder"></a>
+            <h3>stakeholder<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/fyp_process_ontology#Stakeholder</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><span class="dotted" title="http://schema.org/Person">person</span></dd>
+                <dt>has sub-classes</dt>
+                <dd><a href="#d4e1055"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1170"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1192"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1170" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student"></a>
+            <h3>student<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a href="#toc">ToC</a>
+                    or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1009"
+                        title="http://www.semanticweb.org/fyp_process_ontology#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is in domain of</dt>
+                <dd><a href="#d4e693"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn">works
+                        on</a><sup title="object property" class="type-op">op</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1949"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1">student1</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1055"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1192"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1177" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission"></a>
+            <h3>submission<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1077"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1093"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1185" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage"></a>
+            <h3>submission stage<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage</p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1142"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1048"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage">evaluation
+                        stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1120"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1192" class="entity"><a
+                name="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor"></a>
+            <h3>supervisor<sup title="class" class="type-c">c</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#classes">Class ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor
+            </p>
+            <dl class="description">
+                <dt>has super-classes</dt>
+                <dd><a href="#d4e1009"
+                        title="http://www.semanticweb.org/fyp_process_ontology#Stakeholder">stakeholder</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has members</dt>
+                <dd><a href="#d4e1929"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1">supervisor1</a><sup
+                        title="named individual" class="type-ni">ni</sup></dd>
+                <dt>is disjoint with</dt>
+                <dd><a href="#d4e1055"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator">evaluator</a><sup
+                        title="class" class="type-c">c</sup>, <a href="#d4e1170"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="objectproperties">
+        <h2>Object Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e586"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject"><span>belongs
+                        to project</span></a></li>
+            <li><a href="#d4e608"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable"><span>has
+                        deliverable</span></a></li>
+            <li><a href="#d4e633"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone"><span>has
+                        milestone</span></a></li>
+            <li><a href="#d4e656"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage"><span>has
+                        stage</span></a></li>
+            <li><a href="#d4e670"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder"><span>involves
+                        stakeholder</span></a></li>
+            <li><a href="#d4e693"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn"><span>works
+                        on</span></a></li>
+        </ul>
+        <div id="d4e586" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject"></a>
+            <h3>belongs to project<sup title="object property" class="type-op">op</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#belongsToProject</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1017"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e1077"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e608" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable"></a>
+            <h3>has deliverable<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDeliverable</p>
+            <div class="comment"><span class="markdown">Links to deliverables</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1142"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <span class="dotted"
+                            title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e1017"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e633" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone"></a>
+            <h3>has milestone<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasMilestone</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1142"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <span class="dotted"
+                            title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e1077"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e656" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage"></a>
+            <h3>has stage<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasStage
+            </p>
+            <div class="comment"><span class="markdown">Links a project to its stages</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><a href="#d4e1142"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e670" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder"></a>
+            <h3>involves stakeholder<sup title="object property" class="type-op">op</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#involvesStakeholder</p>
+            <div class="comment"><span class="markdown">Indicates stakeholders involved</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1142"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <span class="dotted"
+                            title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e693" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn"></a>
+            <h3>works on<sup title="object property" class="type-op">op</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#worksOn
+            </p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1170"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="dataproperties">
+        <h2>Data Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e707" title="http://purl.org/dc/terms/alternative"><span>Alternative Title</span></a></li>
+            <li><a href="#d4e721" title="http://purl.org/dc/terms/bibliographicCitation"><span>Bibliographic
+                        Citation</span></a></li>
+            <li><a href="#d4e740" title="http://purl.org/dc/terms/dateAccepted"><span>Date Accepted</span></a></li>
+            <li><a href="#d4e714" title="http://purl.org/dc/terms/available"><span>Date Available</span></a></li>
+            <li><a href="#d4e748" title="http://purl.org/dc/terms/dateCopyrighted"><span>Date Copyrighted</span></a>
+            </li>
+            <li><a href="#d4e729" title="http://purl.org/dc/terms/created"><span>Date Created</span></a></li>
+            <li><a href="#d4e767" title="http://purl.org/dc/terms/issued"><span>Date Issued</span></a></li>
+            <li><a href="#d4e774" title="http://purl.org/dc/terms/modified"><span>Date Modified</span></a></li>
+            <li><a href="#d4e755" title="http://purl.org/dc/terms/dateSubmitted"><span>Date Submitted</span></a></li>
+            <li><a href="#d4e786" title="http://purl.org/dc/terms/valid"><span>Date Valid</span></a></li>
+            <li><a href="#d4e793"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription"><span>has
+                        description</span></a></li>
+            <li><a href="#d4e818"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain"><span>has
+                        domain</span></a></li>
+            <li><a href="#d4e833"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate"><span>has
+                        due date</span></a></li>
+            <li><a href="#d4e855"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective"><span>has
+                        objective</span></a></li>
+            <li><a href="#d4e869"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle"><span>has
+                        title</span></a></li>
+        </ul>
+        <div id="d4e707" class="entity"><a name="http://purl.org/dc/terms/alternative"></a>
+            <h3>Alternative Title<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/alternative</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/title">Title</span><sup
+                            title="data property" class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e116">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e721" class="entity"><a name="http://purl.org/dc/terms/bibliographicCitation"></a>
+            <h3>Bibliographic Citation<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/identifier">Identifier</span><sup
+                            title="data property" class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e139">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e740" class="entity"><a name="http://purl.org/dc/terms/dateAccepted"></a>
+            <h3>Date Accepted<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateAccepted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e200">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e714" class="entity"><a name="http://purl.org/dc/terms/available"></a>
+            <h3>Date Available<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/available</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e129">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e748" class="entity"><a name="http://purl.org/dc/terms/dateCopyrighted"></a>
+            <h3>Date Copyrighted<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateCopyrighted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e209">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e729" class="entity"><a name="http://purl.org/dc/terms/created"></a>
+            <h3>Date Created<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e172">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e767" class="entity"><a name="http://purl.org/dc/terms/issued"></a>
+            <h3>Date Issued<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e353">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e774" class="entity"><a name="http://purl.org/dc/terms/modified"></a>
+            <h3>Date Modified<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e395">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e755" class="entity"><a name="http://purl.org/dc/terms/dateSubmitted"></a>
+            <h3>Date Submitted<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateSubmitted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e219">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e786" class="entity"><a name="http://purl.org/dc/terms/valid"></a>
+            <h3>Date Valid<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/valid</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/date">Date</span><sup title="data property"
+                            class="type-dp">dp</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e516">annotation property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e793" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription"></a>
+            <h3>has description<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription</p>
+            <div class="comment"><span class="markdown">Description of stages/milestones</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1077"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e1142"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Stage">stage</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e818" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain"></a>
+            <h3>has domain<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain
+            </p>
+            <div class="comment"><span class="markdown">The domain of the FYP</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e833" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate"></a>
+            <h3>has due date<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate
+            </p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><a href="#d4e1017"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Deliverable">deliverable</a><sup
+                            title="class" class="type-c">c</sup> <span class="logic">or</span> <a href="#d4e1077"
+                            title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Milestone">milestone</a><sup
+                            title="class" class="type-c">c</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e855" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective"></a>
+            <h3>has objective<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasObjective</p>
+            <div class="comment"><span class="markdown">The objective of the FYP</span></div>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e869" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle"></a>
+            <h3>has title<sup title="data property" class="type-dp">dp</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle
+            </p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data
+                            property</span></dd>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://xmlns.com/foaf/0.1/Project">project</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="namedindividuals">
+        <h2>Named Individuals</h2>
+        <ul class="hlist">
+            <li><a href="#d4e1260" title="http://purl.org/dc/terms/Agent"><span>Agent</span></a></li>
+            <li><a href="#d4e1280" title="http://purl.org/dc/terms/DCMIType">DCMI Type Vocabulary</a></li>
+            <li><a href="#d4e1302" title="http://purl.org/dc/terms/DDC">DDC</a></li>
+            <li><a href="#d4e1332" title="http://purl.org/dc/terms/IMT">IMT</a></li>
+            <li><a href="#d4e1712" title="http://purl.org/dc/terms/instructionalMethod">Instructional Method</a></li>
+            <li><a href="#d4e1370" title="http://purl.org/dc/terms/LCC">LCC</a></li>
+            <li><a href="#d4e1392" title="http://purl.org/dc/terms/LCSH">LCSH</a></li>
+            <li><a href="#d4e1427" title="http://purl.org/dc/terms/MESH">MeSH</a></li>
+            <li><a href="#d4e1892"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation"><span>midterm
+                        presentation</span></a></li>
+            <li><a href="#d4e1902"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project"><span>my
+                        project</span></a></li>
+            <li><a href="#d4e1466" title="http://purl.org/dc/terms/NLM">NLM</a></li>
+            <li><a href="#d4e1918"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1"><span>proposal
+                        doc1</span></a></li>
+            <li><a href="#d4e1939"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1"><span>proposal
+                        stage 1</span></a></li>
+            <li><a href="#d4e1786" title="http://purl.org/dc/terms/provenance">Provenance</a></li>
+            <li><a href="#d4e1835" title="http://purl.org/dc/terms/rightsHolder">Rights Holder</a></li>
+            <li><a href="#d4e1949"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1"><span>student1</span></a>
+            </li>
+            <li><a href="#d4e1929"
+                    title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1"><span>supervisor1</span></a>
+            </li>
+            <li><a href="#d4e1247" title="http://purl.org/dc/terms/"><span>terms:</span></a></li>
+            <li><a href="#d4e1548" title="http://purl.org/dc/terms/TGN">TGN</a></li>
+            <li><a href="#d4e1569" title="http://purl.org/dc/terms/UDC">UDC</a></li>
+        </ul>
+        <div id="d4e1260" class="entity"><a name="http://purl.org/dc/terms/Agent"></a>
+            <h3>Agent<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/Agent</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e891" title="http://purl.org/dc/terms/AgentClass">Agent Class</a><sup title="class"
+                        class="type-c">c</sup></dd>
+                <dt>is also defined as</dt>
+                <dd>class</dd>
+            </dl>
+        </div>
+        <div id="d4e1280" class="entity"><a name="http://purl.org/dc/terms/DCMIType"></a>
+            <h3>DCMI Type Vocabulary<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/DCMIType</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of classes specified by the DCMI Type Vocabulary, used
+                    to categorize the nature or genre of the resource.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1302" class="entity"><a name="http://purl.org/dc/terms/DDC"></a>
+            <h3>DDC<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/DDC</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of conceptual resources specified by the Dewey Decimal
+                    Classification.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1332" class="entity"><a name="http://purl.org/dc/terms/IMT"></a>
+            <h3>IMT<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/IMT</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of media types specified by the Internet Assigned
+                    Numbers Authority.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1712" class="entity"><a name="http://purl.org/dc/terms/instructionalMethod"></a>
+            <h3>Instructional Method<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/instructionalMethod</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">A process, used to engender knowledge, attitudes and skills,
+                    that the described resource is designed to support.</span></div>
+            <dl class="description">
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2005-06-13"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1370" class="entity"><a name="http://purl.org/dc/terms/LCC"></a>
+            <h3>LCC<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/LCC</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of conceptual resources specified by the Library of
+                    Congress Classification.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1392" class="entity"><a name="http://purl.org/dc/terms/LCSH"></a>
+            <h3>LCSH<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/LCSH</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of labeled concepts specified by the Library of Congress
+                    Subject Headings.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1427" class="entity"><a name="http://purl.org/dc/terms/MESH"></a>
+            <h3>MeSH<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/MESH</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of labeled concepts specified by the Medical Subject
+                    Headings.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1892" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation"></a>
+            <h3>midterm presentation<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#MidtermPresentation</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1093"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Presentation">presentation</a><sup
+                        title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e833"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2025-07-15"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e1902" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project"></a>
+            <h3>my project<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#My_project
+            </p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1134"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project">software
+                        project</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e818"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDomain">has
+                        domain</a><sup title="data property" class="type-dp">dp</sup> <span class="literal">"Artificial
+                        Intelligence"</span></dd>
+                <dd><a href="#d4e869"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasTitle">has
+                        title</a><sup title="data property" class="type-dp">dp</sup> <span class="literal">"AI Mood
+                        Based Music Recommendation"</span></dd>
+            </dl>
+            <div class="info"><span class="markdown">A project that recommends music based on user's mood</span></div>
+        </div>
+        <div id="d4e1466" class="entity"><a name="http://purl.org/dc/terms/NLM"></a>
+            <h3>NLM<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/NLM</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of conceptual resources specified by the National
+                    Library of Medicine Classification.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2005-06-13"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1918" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1"></a>
+            <h3>proposal doc1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#ProposalDoc1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1112"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document">proposal
+                        document</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e833"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDueDate">has
+                        due date</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"2025-08-01"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e1939" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1"></a>
+            <h3>proposal stage 1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#proposal_Stage_1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1120"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage">proposal
+                        stage</a><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e793"
+                        title="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#hasDescription">has
+                        description</a><sup title="data property" class="type-dp">dp</sup> <span
+                        class="literal">"Develop project proposal"</span></dd>
+            </dl>
+        </div>
+        <div id="d4e1786" class="entity"><a name="http://purl.org/dc/terms/provenance"></a>
+            <h3>Provenance<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/provenance</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">A statement of any changes in ownership and custody of the
+                    resource since its creation that are significant for its authenticity, integrity, and
+                    interpretation.</span></div>
+            <dl class="description">
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2004-09-20"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1835" class="entity"><a name="http://purl.org/dc/terms/rightsHolder"></a>
+            <h3>Rights Holder<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/rightsHolder</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">A person or organization owning or managing rights over the
+                    resource.</span></div>
+            <dl class="description">
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2004-06-14"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1949" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1"></a>
+            <h3>student1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#student1
+            </p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1170"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1929" class="entity"><a
+                name="http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1"></a>
+            <h3>supervisor1<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong>
+                http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#Supervisor1</p>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><a href="#d4e1192"
+                        title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor">supervisor</a><sup
+                        title="class" class="type-c">c</sup></dd>
+            </dl>
+        </div>
+        <div id="d4e1247" class="entity"><a name="http://purl.org/dc/terms/"></a>
+            <h3>terms:<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/</p>
+            <dl class="description">
+                <dt>has facts</dt>
+                <dd><a href="#d4e774" title="http://purl.org/dc/terms/modified">Date Modified</a><sup
+                        title="data property" class="type-dp">dp</sup> <span class="literal">"2012-06-14"^^<span
+                            class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+                <dd><span class="dotted" title="http://purl.org/dc/terms/title">Title</span><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"DCMI Metadata Terms - other"@en</span></dd>
+            </dl>
+        </div>
+        <div id="d4e1548" class="entity"><a name="http://purl.org/dc/terms/TGN"></a>
+            <h3>TGN<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/TGN</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of places specified by the Getty Thesaurus of Geographic
+                    Names.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+        <div id="d4e1569" class="entity"><a name="http://purl.org/dc/terms/UDC"></a>
+            <h3>UDC<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/UDC</p>
+            <dl class="definedBy">
+                <dt>is defined by</dt>
+                <dd><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></dd>
+            </dl>
+            <div class="comment"><span class="markdown">The set of conceptual resources specified by the Universal
+                    Decimal Classification.</span></div>
+            <dl class="description">
+                <dt>belongs to</dt>
+                <dd><span class="dotted" title="http://purl.org/dc/dcam/VocabularyEncodingScheme">vocabulary encoding
+                        scheme</span><sup title="class" class="type-c">c</sup></dd>
+                <dt>has facts</dt>
+                <dd><a href="#d4e767" title="http://purl.org/dc/terms/issued">Date Issued</a><sup title="data property"
+                        class="type-dp">dp</sup> <span class="literal">"2000-07-11"^^<span class="dotted"
+                            title="http://www.w3.org/2001/XMLSchema#date">date</span></span></dd>
+            </dl>
+        </div>
+    </div>
+    <div id="annotationproperties">
+        <h2>Annotation Properties</h2>
+        <ul class="hlist">
+            <li><a href="#d4e75" title="http://purl.org/dc/terms/abstract"><span>Abstract</span></a></li>
+            <li><a href="#d4e84" title="http://purl.org/dc/terms/accessRights"><span>Access Rights</span></a></li>
+            <li><a href="#d4e94" title="http://purl.org/dc/terms/accrualMethod"><span>Accrual Method</span></a></li>
+            <li><a href="#d4e101" title="http://purl.org/dc/terms/accrualPeriodicity"><span>Accrual
+                        Periodicity</span></a></li>
+            <li><a href="#d4e108" title="http://purl.org/dc/terms/accrualPolicy"><span>Accrual Policy</span></a></li>
+            <li><a href="#d4e116" title="http://purl.org/dc/terms/alternative"><span>Alternative Title</span></a></li>
+            <li><a href="#d4e125" title="http://purl.org/dc/terms/audience"><span>Audience</span></a></li>
+            <li><a href="#d4e235" title="http://purl.org/dc/terms/educationLevel"><span>Audience Education
+                        Level</span></a></li>
+            <li><a href="#d4e139" title="http://purl.org/dc/terms/bibliographicCitation"><span>Bibliographic
+                        Citation</span></a></li>
+            <li><a href="#d4e148" title="http://purl.org/dc/terms/conformsTo"><span>Conforms To</span></a></li>
+            <li><a href="#d4e23" title="http://purl.org/dc/elements/1.1/contributor"><span>contributor</span></a></li>
+            <li><a href="#d4e157" title="http://purl.org/dc/terms/contributor"><span>Contributor</span></a></li>
+            <li><a href="#d4e27" title="http://purl.org/dc/elements/1.1/coverage"><span>coverage</span></a></li>
+            <li><a href="#d4e165" title="http://purl.org/dc/terms/coverage"><span>Coverage</span></a></li>
+            <li><a href="#d4e32" title="http://purl.org/dc/elements/1.1/creator"><span>creator</span></a></li>
+            <li><a href="#d4e181" title="http://purl.org/dc/terms/creator"><span>Creator</span></a></li>
+            <li><a href="#d4e191" title="http://purl.org/dc/terms/date"><span>Date</span></a></li>
+            <li><a href="#d4e200" title="http://purl.org/dc/terms/dateAccepted"><span>Date Accepted</span></a></li>
+            <li><a href="#d4e129" title="http://purl.org/dc/terms/available"><span>Date Available</span></a></li>
+            <li><a href="#d4e209" title="http://purl.org/dc/terms/dateCopyrighted"><span>Date Copyrighted</span></a>
+            </li>
+            <li><a href="#d4e172" title="http://purl.org/dc/terms/created"><span>Date Created</span></a></li>
+            <li><a href="#d4e353" title="http://purl.org/dc/terms/issued"><span>Date Issued</span></a></li>
+            <li><a href="#d4e395" title="http://purl.org/dc/terms/modified"><span>Date Modified</span></a></li>
+            <li><a href="#d4e219" title="http://purl.org/dc/terms/dateSubmitted"><span>Date Submitted</span></a></li>
+            <li><a href="#d4e516" title="http://purl.org/dc/terms/valid"><span>Date Valid</span></a></li>
+            <li><a href="#d4e228" title="http://purl.org/dc/terms/description"><span>Description</span></a></li>
+            <li><a href="#d4e14" title="http://purl.org/dc/dcam/domainIncludes"><span>domain includes</span></a></li>
+            <li><a href="#d4e243" title="http://purl.org/dc/terms/extent"><span>Extent</span></a></li>
+            <li><a href="#d4e36" title="http://purl.org/dc/elements/1.1/format"><span>format</span></a></li>
+            <li><a href="#d4e252" title="http://purl.org/dc/terms/format"><span>Format</span></a></li>
+            <li><a href="#d4e259" title="http://purl.org/dc/terms/hasFormat"><span>Has Format</span></a></li>
+            <li><a href="#d4e269" title="http://purl.org/dc/terms/hasPart"><span>Has Part</span></a></li>
+            <li><a href="#d4e278" title="http://purl.org/dc/terms/hasVersion"><span>Has Version</span></a></li>
+            <li><a href="#d4e40" title="http://purl.org/dc/elements/1.1/identifier"><span>identifier</span></a></li>
+            <li><a href="#d4e287" title="http://purl.org/dc/terms/identifier"><span>Identifier</span></a></li>
+            <li><a href="#d4e297" title="http://purl.org/dc/terms/isFormatOf"><span>Is Format Of</span></a></li>
+            <li><a href="#d4e306" title="http://purl.org/dc/terms/isPartOf"><span>Is Part Of</span></a></li>
+            <li><a href="#d4e315" title="http://purl.org/dc/terms/isReferencedBy"><span>Is Referenced By</span></a></li>
+            <li><a href="#d4e325" title="http://purl.org/dc/terms/isReplacedBy"><span>Is Replaced By</span></a></li>
+            <li><a href="#d4e334" title="http://purl.org/dc/terms/isRequiredBy"><span>Is Required By</span></a></li>
+            <li><a href="#d4e343" title="http://purl.org/dc/terms/isVersionOf"><span>Is Version Of</span></a></li>
+            <li><a href="#d4e45" title="http://purl.org/dc/elements/1.1/language"><span>language</span></a></li>
+            <li><a href="#d4e362" title="http://purl.org/dc/terms/language"><span>Language</span></a></li>
+            <li><a href="#d4e369" title="http://purl.org/dc/terms/license"><span>License</span></a></li>
+            <li><a href="#d4e379" title="http://purl.org/dc/terms/mediator"><span>Mediator</span></a></li>
+            <li><a href="#d4e386" title="http://purl.org/dc/terms/medium"><span>Medium</span></a></li>
+            <li><a href="#d4e49" title="http://purl.org/dc/elements/1.1/publisher"><span>publisher</span></a></li>
+            <li><a href="#d4e405" title="http://purl.org/dc/terms/publisher"><span>Publisher</span></a></li>
+            <li><a href="#d4e19" title="http://purl.org/dc/dcam/rangeIncludes"><span>range includes</span></a></li>
+            <li><a href="#d4e412" title="http://purl.org/dc/terms/references"><span>References</span></a></li>
+            <li><a href="#d4e53" title="http://purl.org/dc/elements/1.1/relation"><span>relation</span></a></li>
+            <li><a href="#d4e421" title="http://purl.org/dc/terms/relation"><span>Relation</span></a></li>
+            <li><a href="#d4e429" title="http://purl.org/dc/terms/replaces"><span>Replaces</span></a></li>
+            <li><a href="#d4e438" title="http://purl.org/dc/terms/requires"><span>Requires</span></a></li>
+            <li><a href="#d4e58" title="http://purl.org/dc/elements/1.1/rights"><span>rights</span></a></li>
+            <li><a href="#d4e447" title="http://purl.org/dc/terms/rights"><span>Rights</span></a></li>
+            <li><a href="#d4e62" title="http://purl.org/dc/elements/1.1/source"><span>source</span></a></li>
+            <li><a href="#d4e455" title="http://purl.org/dc/terms/source"><span>Source</span></a></li>
+            <li><a href="#d4e464" title="http://purl.org/dc/terms/spatial"><span>Spatial Coverage</span></a></li>
+            <li><a href="#d4e66" title="http://purl.org/dc/elements/1.1/subject"><span>subject</span></a></li>
+            <li><a href="#d4e473" title="http://purl.org/dc/terms/subject"><span>Subject</span></a></li>
+            <li><a href="#d4e481" title="http://purl.org/dc/terms/tableOfContents"><span>Table Of Contents</span></a>
+            </li>
+            <li><a href="#d4e490" title="http://purl.org/dc/terms/temporal"><span>Temporal Coverage</span></a></li>
+            <li><a href="#d4e499" title="http://purl.org/dc/terms/title"><span>Title</span></a></li>
+            <li><a href="#d4e71" title="http://purl.org/dc/elements/1.1/type"><span>type</span></a></li>
+            <li><a href="#d4e509" title="http://purl.org/dc/terms/type"><span>Type</span></a></li>
+        </ul>
+        <div id="d4e75" class="entity"><a name="http://purl.org/dc/terms/abstract"></a>
+            <h3>Abstract<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/description">description</span></dd>
+                    <dd><a href="#d4e228" title="http://purl.org/dc/terms/description">Description</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e84" class="entity"><a name="http://purl.org/dc/terms/accessRights"></a>
+            <h3>Access Rights<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/accessRights</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/rights">rights</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e447" title="http://purl.org/dc/terms/rights">Rights</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e94" class="entity"><a name="http://purl.org/dc/terms/accrualMethod"></a>
+            <h3>Accrual Method<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/accrualMethod</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/dcmitype/Collection">collection</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e101" class="entity"><a name="http://purl.org/dc/terms/accrualPeriodicity"></a>
+            <h3>Accrual Periodicity<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/accrualPeriodicity</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/dcmitype/Collection">collection</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e108" class="entity"><a name="http://purl.org/dc/terms/accrualPolicy"></a>
+            <h3>Accrual Policy<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/accrualPolicy</p>
+            <div class="description">
+                <dl>
+                    <dt>has domain</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/dcmitype/Collection">collection</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e116" class="entity"><a name="http://purl.org/dc/terms/alternative"></a>
+            <h3>Alternative Title<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/alternative</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/title">title</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e707">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e125" class="entity"><a name="http://purl.org/dc/terms/audience"></a>
+            <h3>Audience<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/audience</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e235" title="http://purl.org/dc/terms/educationLevel">Audience Education
+                            Level</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e379"
+                            title="http://purl.org/dc/terms/mediator">Mediator</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e235" class="entity"><a name="http://purl.org/dc/terms/educationLevel"></a>
+            <h3>Audience Education Level<sup title="annotation property" class="type-ap">ap</sup><span class="backlink">
+                    back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span>
+            </h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/educationLevel</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/audience">Audience</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e139" class="entity"><a name="http://purl.org/dc/terms/bibliographicCitation"></a>
+            <h3>Bibliographic Citation<sup title="annotation property" class="type-ap">ap</sup><span class="backlink">
+                    back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span>
+            </h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/identifier">identifier</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e721">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e148" class="entity"><a name="http://purl.org/dc/terms/conformsTo"></a>
+            <h3>Conforms To<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/conformsTo</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e23" class="entity"><a name="http://purl.org/dc/elements/1.1/contributor"></a>
+            <h3>contributor<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/contributor</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e157" title="http://purl.org/dc/terms/contributor">Contributor</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e157" class="entity"><a name="http://purl.org/dc/terms/contributor"></a>
+            <h3>Contributor<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/contributor">contributor</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e181" title="http://purl.org/dc/terms/creator">Creator</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e27" class="entity"><a name="http://purl.org/dc/elements/1.1/coverage"></a>
+            <h3>coverage<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/coverage</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e165" title="http://purl.org/dc/terms/coverage">Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e464"
+                            title="http://purl.org/dc/terms/spatial">Spatial Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e490"
+                            title="http://purl.org/dc/terms/temporal">Temporal Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e165" class="entity"><a name="http://purl.org/dc/terms/coverage"></a>
+            <h3>Coverage<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/coverage</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/coverage">coverage</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e464" title="http://purl.org/dc/terms/spatial">Spatial Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e490"
+                            title="http://purl.org/dc/terms/temporal">Temporal Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e32" class="entity"><a name="http://purl.org/dc/elements/1.1/creator"></a>
+            <h3>creator<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e181" title="http://purl.org/dc/terms/creator">Creator</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e181" class="entity"><a name="http://purl.org/dc/terms/creator"></a>
+            <h3>Creator<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/creator">creator</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e157" title="http://purl.org/dc/terms/contributor">Contributor</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e191" class="entity"><a name="http://purl.org/dc/terms/date"></a>
+            <h3>Date<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/date</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>data property, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e200" class="entity"><a name="http://purl.org/dc/terms/dateAccepted"></a>
+            <h3>Date Accepted<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateAccepted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e740">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e129" class="entity"><a name="http://purl.org/dc/terms/available"></a>
+            <h3>Date Available<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/available</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e714">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e209" class="entity"><a name="http://purl.org/dc/terms/dateCopyrighted"></a>
+            <h3>Date Copyrighted<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateCopyrighted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e748">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e172" class="entity"><a name="http://purl.org/dc/terms/created"></a>
+            <h3>Date Created<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e729">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e353" class="entity"><a name="http://purl.org/dc/terms/issued"></a>
+            <h3>Date Issued<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e767">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e395" class="entity"><a name="http://purl.org/dc/terms/modified"></a>
+            <h3>Date Modified<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e774">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e219" class="entity"><a name="http://purl.org/dc/terms/dateSubmitted"></a>
+            <h3>Date Submitted<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/dateSubmitted</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e755">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e516" class="entity"><a name="http://purl.org/dc/terms/valid"></a>
+            <h3>Date Valid<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/valid</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/date">date</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd><a href="#d4e786">data property</a>, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e228" class="entity"><a name="http://purl.org/dc/terms/description"></a>
+            <h3>Description<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/description">description</span></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e75" title="http://purl.org/dc/terms/abstract">Abstract</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e481"
+                            title="http://purl.org/dc/terms/tableOfContents">Table Of Contents</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e14" class="entity"><a name="http://purl.org/dc/dcam/domainIncludes"></a>
+            <h3>domain includes<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/dcam/domainIncludes</p>
+        </div>
+        <div id="d4e243" class="entity"><a name="http://purl.org/dc/terms/extent"></a>
+            <h3>Extent<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/extent</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/format">format</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e252" title="http://purl.org/dc/terms/format">Format</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e36" class="entity"><a name="http://purl.org/dc/elements/1.1/format"></a>
+            <h3>format<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/format</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e243" title="http://purl.org/dc/terms/extent">Extent</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e252"
+                            title="http://purl.org/dc/terms/format">Format</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e386"
+                            title="http://purl.org/dc/terms/medium">Medium</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e252" class="entity"><a name="http://purl.org/dc/terms/format"></a>
+            <h3>Format<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/format</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/format">format</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e243" title="http://purl.org/dc/terms/extent">Extent</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e386"
+                            title="http://purl.org/dc/terms/medium">Medium</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e259" class="entity"><a name="http://purl.org/dc/terms/hasFormat"></a>
+            <h3>Has Format<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/hasFormat</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e269" class="entity"><a name="http://purl.org/dc/terms/hasPart"></a>
+            <h3>Has Part<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/hasPart</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e278" class="entity"><a name="http://purl.org/dc/terms/hasVersion"></a>
+            <h3>Has Version<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/hasVersion</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e40" class="entity"><a name="http://purl.org/dc/elements/1.1/identifier"></a>
+            <h3>identifier<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/identifier</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e139" title="http://purl.org/dc/terms/bibliographicCitation">Bibliographic
+                            Citation</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e287"
+                            title="http://purl.org/dc/terms/identifier">Identifier</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e287" class="entity"><a name="http://purl.org/dc/terms/identifier"></a>
+            <h3>Identifier<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/identifier">identifier</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>data property, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e297" class="entity"><a name="http://purl.org/dc/terms/isFormatOf"></a>
+            <h3>Is Format Of<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isFormatOf</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e306" class="entity"><a name="http://purl.org/dc/terms/isPartOf"></a>
+            <h3>Is Part Of<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isPartOf</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e315" class="entity"><a name="http://purl.org/dc/terms/isReferencedBy"></a>
+            <h3>Is Referenced By<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isReferencedBy</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e325" class="entity"><a name="http://purl.org/dc/terms/isReplacedBy"></a>
+            <h3>Is Replaced By<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isReplacedBy</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e334" class="entity"><a name="http://purl.org/dc/terms/isRequiredBy"></a>
+            <h3>Is Required By<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isRequiredBy</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e343" class="entity"><a name="http://purl.org/dc/terms/isVersionOf"></a>
+            <h3>Is Version Of<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/isVersionOf</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e45" class="entity"><a name="http://purl.org/dc/elements/1.1/language"></a>
+            <h3>language<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/language</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e362" title="http://purl.org/dc/terms/language">Language</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e362" class="entity"><a name="http://purl.org/dc/terms/language"></a>
+            <h3>Language<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/language</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/language">language</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e369" class="entity"><a name="http://purl.org/dc/terms/license"></a>
+            <h3>License<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/rights">rights</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e447" title="http://purl.org/dc/terms/rights">Rights</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e379" class="entity"><a name="http://purl.org/dc/terms/mediator"></a>
+            <h3>Mediator<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/mediator</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/terms/audience">Audience</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e386" class="entity"><a name="http://purl.org/dc/terms/medium"></a>
+            <h3>Medium<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/medium</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/format">format</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e252" title="http://purl.org/dc/terms/format">Format</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e49" class="entity"><a name="http://purl.org/dc/elements/1.1/publisher"></a>
+            <h3>publisher<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/publisher</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e405" title="http://purl.org/dc/terms/publisher">Publisher</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e405" class="entity"><a name="http://purl.org/dc/terms/publisher"></a>
+            <h3>Publisher<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/publisher">publisher</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e19" class="entity"><a name="http://purl.org/dc/dcam/rangeIncludes"></a>
+            <h3>range includes<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/dcam/rangeIncludes</p>
+        </div>
+        <div id="d4e412" class="entity"><a name="http://purl.org/dc/terms/references"></a>
+            <h3>References<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/references</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e53" class="entity"><a name="http://purl.org/dc/elements/1.1/relation"></a>
+            <h3>relation<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/relation</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e148" title="http://purl.org/dc/terms/conformsTo">Conforms To</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e259"
+                            title="http://purl.org/dc/terms/hasFormat">Has Format</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e269" title="http://purl.org/dc/terms/hasPart">Has
+                            Part</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e278"
+                            title="http://purl.org/dc/terms/hasVersion">Has Version</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e297" title="http://purl.org/dc/terms/isFormatOf">Is
+                            Format Of</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e306"
+                            title="http://purl.org/dc/terms/isPartOf">Is Part Of</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e315"
+                            title="http://purl.org/dc/terms/isReferencedBy">Is Referenced By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e325"
+                            title="http://purl.org/dc/terms/isReplacedBy">Is Replaced By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e334"
+                            title="http://purl.org/dc/terms/isRequiredBy">Is Required By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e343"
+                            title="http://purl.org/dc/terms/isVersionOf">Is Version Of</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e412"
+                            title="http://purl.org/dc/terms/references">References</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e421"
+                            title="http://purl.org/dc/terms/relation">Relation</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e429"
+                            title="http://purl.org/dc/terms/replaces">Replaces</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e438"
+                            title="http://purl.org/dc/terms/requires">Requires</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e421" class="entity"><a name="http://purl.org/dc/terms/relation"></a>
+            <h3>Relation<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/relation</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e148" title="http://purl.org/dc/terms/conformsTo">Conforms To</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e259"
+                            title="http://purl.org/dc/terms/hasFormat">Has Format</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e269" title="http://purl.org/dc/terms/hasPart">Has
+                            Part</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e278"
+                            title="http://purl.org/dc/terms/hasVersion">Has Version</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e297" title="http://purl.org/dc/terms/isFormatOf">Is
+                            Format Of</a><sup title="annotation property" class="type-ap">ap</sup>, <a href="#d4e306"
+                            title="http://purl.org/dc/terms/isPartOf">Is Part Of</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e315"
+                            title="http://purl.org/dc/terms/isReferencedBy">Is Referenced By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e325"
+                            title="http://purl.org/dc/terms/isReplacedBy">Is Replaced By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e334"
+                            title="http://purl.org/dc/terms/isRequiredBy">Is Required By</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e343"
+                            title="http://purl.org/dc/terms/isVersionOf">Is Version Of</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e412"
+                            title="http://purl.org/dc/terms/references">References</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e429"
+                            title="http://purl.org/dc/terms/replaces">Replaces</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e438"
+                            title="http://purl.org/dc/terms/requires">Requires</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e455"
+                            title="http://purl.org/dc/terms/source">Source</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e429" class="entity"><a name="http://purl.org/dc/terms/replaces"></a>
+            <h3>Replaces<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/replaces</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e438" class="entity"><a name="http://purl.org/dc/terms/requires"></a>
+            <h3>Requires<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/requires</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/relation">relation</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e58" class="entity"><a name="http://purl.org/dc/elements/1.1/rights"></a>
+            <h3>rights<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/rights</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e84" title="http://purl.org/dc/terms/accessRights">Access Rights</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e369"
+                            title="http://purl.org/dc/terms/license">License</a><sup title="annotation property"
+                            class="type-ap">ap</sup>, <a href="#d4e447"
+                            title="http://purl.org/dc/terms/rights">Rights</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e447" class="entity"><a name="http://purl.org/dc/terms/rights"></a>
+            <h3>Rights<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/rights</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/rights">rights</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e84" title="http://purl.org/dc/terms/accessRights">Access Rights</a><sup
+                            title="annotation property" class="type-ap">ap</sup>, <a href="#d4e369"
+                            title="http://purl.org/dc/terms/license">License</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e62" class="entity"><a name="http://purl.org/dc/elements/1.1/source"></a>
+            <h3>source<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/source</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e455" title="http://purl.org/dc/terms/source">Source</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e455" class="entity"><a name="http://purl.org/dc/terms/source"></a>
+            <h3>Source<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/source">source</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e421" title="http://purl.org/dc/terms/relation">Relation</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e464" class="entity"><a name="http://purl.org/dc/terms/spatial"></a>
+            <h3>Spatial Coverage<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to
+                    <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/spatial</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/coverage">coverage</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e165" title="http://purl.org/dc/terms/coverage">Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e66" class="entity"><a name="http://purl.org/dc/elements/1.1/subject"></a>
+            <h3>subject<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/subject</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e473" title="http://purl.org/dc/terms/subject">Subject</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e473" class="entity"><a name="http://purl.org/dc/terms/subject"></a>
+            <h3>Subject<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/subject</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/subject">subject</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e481" class="entity"><a name="http://purl.org/dc/terms/tableOfContents"></a>
+            <h3>Table Of Contents<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/tableOfContents</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/description">description</span></dd>
+                    <dd><a href="#d4e228" title="http://purl.org/dc/terms/description">Description</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e490" class="entity"><a name="http://purl.org/dc/terms/temporal"></a>
+            <h3>Temporal Coverage<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back
+                    to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/temporal</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/coverage">coverage</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dd><a href="#d4e165" title="http://purl.org/dc/terms/coverage">Coverage</a><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e499" class="entity"><a name="http://purl.org/dc/terms/title"></a>
+            <h3>Title<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/title">title</span></dd>
+                    <dt>has range</dt>
+                    <dd><span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span></dd>
+                    <dt>is also defined as</dt>
+                    <dd>data property, named individual</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e71" class="entity"><a name="http://purl.org/dc/elements/1.1/type"></a>
+            <h3>type<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/type</p>
+            <div class="description">
+                <dl>
+                    <dt>has sub-properties</dt>
+                    <dd><a href="#d4e509" title="http://purl.org/dc/terms/type">Type</a><sup title="annotation property"
+                            class="type-ap">ap</sup></dd>
+                </dl>
+            </div>
+        </div>
+        <div id="d4e509" class="entity"><a name="http://purl.org/dc/terms/type"></a>
+            <h3>Type<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a
+                        href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
+            <p><strong>IRI:</strong> http://purl.org/dc/terms/type</p>
+            <div class="description">
+                <dl>
+                    <dt>has super-properties</dt>
+                    <dd><span class="dotted" title="http://purl.org/dc/elements/1.1/type">type</span><sup
+                            title="annotation property" class="type-ap">ap</sup></dd>
+                    <dt>is also defined as</dt>
+                    <dd>named individual</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="generalaxioms">
+        <h2>General Axioms</h2>
+        <div id="d4e3417" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e1048"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluation_Stage">evaluation
+                    stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1120"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Stage">proposal
+                    stage</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1185"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Submission_Stage">submission
+                    stage</a><sup title="class" class="type-c">c</sup></p>
+        </div>
+        <div id="d4e3431" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e1055"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Evaluator">evaluator</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e1170"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Student">student</a><sup
+                    title="class" class="type-c">c</sup>, <a href="#d4e1192"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Supervisor">supervisor</a><sup
+                    title="class" class="type-c">c</sup></p>
+        </div>
+        <div id="d4e3445" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e1063"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Final_Report">final
+                    report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1102"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Progress_Report">progress
+                    report</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1112"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Proposal_Document">proposal
+                    document</a><sup title="class" class="type-c">c</sup></p>
+        </div>
+        <div id="d4e3460" class="entity">
+            <h3>All Disjoint Classes <span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+            <p><a href="#d4e1070"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Hardware_Project">hardware
+                    project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1127"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Research_Project">research
+                    project</a><sup title="class" class="type-c">c</sup>, <a href="#d4e1134"
+                    title="http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#Software_Project">software
+                    project</a><sup title="class" class="type-c">c</sup></p>
+        </div>
+    </div>
+    <div id="namespacedeclarations">
+        <h2>Namespace Declarations <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+        <dl>
+            <dt><em>default namespace</em></dt>
+            <dd>http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology/</dd>
+            <dt>Fyp_Process_Ontology</dt>
+            <dd>http://www.semanticweb.org/noreen/ontologies/2025/4/Fyp_Process_Ontology#</dd>
+            <dt>aboutdcmi</dt>
+            <dd>http://purl.org/dc/aboutdcmi#</dd>
+            <dt>dc</dt>
+            <dd>http://purl.org/dc/elements/1.1/</dd>
+            <dt>dcam</dt>
+            <dd>http://purl.org/dc/dcam/</dd>
+            <dt>dcmitype</dt>
+            <dd>http://purl.org/dc/dcmitype/</dd>
+            <dt>foaf</dt>
+            <dd>http://xmlns.com/foaf/0.1/</dd>
+            <dt>fyp-process-ontology</dt>
+            <dd>http://www.semanticweb.org/pcz/ontologies/2025/4/FYP_Process_ontology#</dd>
+            <dt>iso639-2</dt>
+            <dd>http://lcweb.loc.gov/standards/iso639-2/</dd>
+            <dt>lcco</dt>
+            <dd>http://lcweb.loc.gov/catdir/cpso/lcco/</dd>
+            <dt>mesh</dt>
+            <dd>http://www.nlm.nih.gov/mesh/</dd>
+            <dt>ns</dt>
+            <dd>http://www.w3.org/2003/06/sw-vocab-status/ns#</dd>
+            <dt>owl</dt>
+            <dd>http://www.w3.org/2002/07/owl#</dd>
+            <dt>rdf</dt>
+            <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+            <dt>rdfs</dt>
+            <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+            <dt>rfc</dt>
+            <dd>http://www.ietf.org/rfc/</dd>
+            <dt>schema-org</dt>
+            <dd>http://schema.org/</dd>
+            <dt>terms</dt>
+            <dd>http://purl.org/dc/terms/</dd>
+            <dt>tgn</dt>
+            <dd>http://www.getty.edu/research/tools/vocabulary/tgn/</dd>
+            <dt>tr</dt>
+            <dd>http://www.w3.org/TR/</dd>
+            <dt>wot</dt>
+            <dd>http://xmlns.com/wot/0.1/</dd>
+            <dt>www-semanticweb-org</dt>
+            <dd>http://www.semanticweb.org/</dd>
+            <dt>xsd</dt>
+            <dd>http://www.w3.org/2001/XMLSchema#</dd>
+        </dl>
+    </div>
+    <p class="endnote">This HTML document was obtained by processing the OWL ontology source code through <a
+            href="http://www.essepuntato.it/lode">LODE</a>, <em>Live OWL Documentation Environment</em>, developed by <a
+            href="http://www.essepuntato.it">Silvio Peroni</a>
+        .
+    </p>
+</body>
+
+</html>
